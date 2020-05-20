@@ -1,0 +1,6 @@
+<%= simple_form_for(@post) do |f| %>
+<%= f.error_notification %>
+    <%= f.input :post, label: "Title of the post", input_html: { class: "textarea "}, wrapper: false, label_html: {class: "label"}, placeholder: "Post title", autofocus: true %>
+    <%= f.input :post, label: "Post body", input_html: { class: "textarea "}, wrapper: false, label_html: {class: "label"}, placeholder: "Write your post here.", autofocus: true %>
+<%= f.button :submit, class: "button is-info" %>
+<% end %>

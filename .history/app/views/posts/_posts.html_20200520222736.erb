@@ -1,0 +1,8 @@
+  
+<% if user_signed_in? %>
+  <p>Author!! : <%= post.user.username %></p>
+  <% if current_user == post.user %>
+    <%= link_to 'Edit', edit_post_path(post) %>
+    <%= link_to 'Delete', post_path(post), method: :delete, data: { confirm: "Do you really want to delete this post?" } %>
+  <% end %>
+<% end %>

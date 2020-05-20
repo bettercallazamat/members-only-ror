@@ -1,0 +1,19 @@
+<%= simple_form_for(@post) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+  <div class="field"
+  <div class="control">
+    <%= f.input :title, input_html: { class: "input", autofocus: true}, wrapper: false, label_html: { class:"label" } %>
+  </div>
+  <div class="control">
+    <%= f.input :body, input_html: { clas: "textarea", size:"70x10", font:"courier"}, label_html: { class:"label"}, wrapper: false %>
+  </div>
+  <br />
+  <div class="control">
+    <%= f.button :submit, class: "button is-info" %>
+  </div>
+  <p>
+    <%= link_to 'Back', posts_path %>
+  </p>
+</div>
+<% end %>
