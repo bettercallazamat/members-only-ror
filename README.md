@@ -7,7 +7,7 @@
 
 ## In this project we are creating a post where  only members can see the post.
 
-This is the [Members Only project](https://www.theodinproject.com/courses/ruby-on-rails/lessons/authentication?ref=lnav) a tutorial and excercices to master the skilss using forms in Ruby on Rails. This repository follows the instructions of [The Oding Project](https://www.theodinproject.com). The final code is reviewed for a [Microverse](https://www.microverse.org/) Technical Support Engineer TSE that supervises, makes suggestions and approves the completeness of the final product.
+This is the [Members Only project](https://www.theodinproject.com/courses/ruby-on-rails/lessons/authentication?ref=lnav) a tutorial and exercise to master the skills using forms in Ruby on Rails. This repository follows the instructions of [The Oding Project](https://www.theodinproject.com). The final code is reviewed for a [Microverse](https://www.microverse.org/) Technical Support Engineer TSE that supervises, makes suggestions and approves the completeness of the final product.
 
 In this project it was used:
 
