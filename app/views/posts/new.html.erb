@@ -1,0 +1,5 @@
+<%= simple_form_for(@tweeet) do |f| %>
+<%= f.error_notification %>
+    <%= f.input :tweeet, label: "Tweeet about it", input_html: { class: "textarea "}, wrapper: false, label_html: {class: "label"}, placeholder: "Compose a new tweeet...", autofocus: true %>
+<%= f.button :submit, class: "button is-info" %>
+<% end %>
