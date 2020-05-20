@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:index]
 
   def index
-    @posts = Post.all.order("updated_at DESC")
+    @posts = Post.all.order('updated_at DESC')
   end
 
   def new
@@ -14,10 +14,10 @@ class PostsController < ApplicationController
     @post.user_id = current_user.id
     # @post = current_user.posts.build(post_params)
     if @post.save
-      flash[:success] = "Object successfully created"
+      flash[:success] = 'Object successfully created'
       redirect_to root_path
     else
-      flash[:error] = "Something went wrong"
+      flash[:error] = 'Something went wrong'
       render 'new'
     end
   end
@@ -42,11 +42,12 @@ class PostsController < ApplicationController
   end
 
   private
+
   def post_params
     params.require(:post).permit(:title, :body)
   end
+
   def show
     @post = Post.find(params[:id])
   end
-
 end
