@@ -16,6 +16,7 @@
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="field is-grouped">
+            <%= link_to  "Go to home page", root_path %>
             <% if user_signed_in? %>
               <p class="control">
                 <%= link_to current_user.name, edit_user_registration_path, class: "button is-info" %>
