@@ -1,0 +1,29 @@
+<% @posts.each do | post |%>
+  <div class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-4">
+          <% if user_signed_in? %>
+            <p>
+              <strong>Author:</strong>
+              <%= post.user.name %>
+            </p>
+          <% end %>
+          <p>
+            <strong>Title:</strong>
+            <%= post.title %>
+          </p>
+          <p>
+            <strong>Body:</strong>
+            <%= post.body %>
+          </p>
+          <% if current_user == post.user %>
+            <%= link_to 'Edit', edit_post_path(post) %> | 
+            <%= link_to 'Delete', post, method: :delete, data: { confirm: "Are you sure you want to delete this tweeet?" } %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+
